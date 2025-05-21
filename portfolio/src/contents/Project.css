@@ -1,0 +1,93 @@
+.section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .section-header h2,
+  .section-header h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #00ffe1;
+    text-shadow: 0 0 5px #00ffe1;
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #00ffe1;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 255, 225, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 225, 0.4);
+  }
+  
+  .project-card h2 {
+    font-size: 20px;
+    color: #00ffe1;
+  }
+  
+  .project-card p,
+  .project-card li {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  .highlight-role3 {
+    color: #00ffe1;
+  }
+  
+  /* Animation */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards ease-out;
+  }
+  
+  .fade-in-up.delay-1 {
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .projects-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .project-card {
+      min-height: 300px;
+    }
+  }
+  
